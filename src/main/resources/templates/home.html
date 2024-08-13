@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>Schnecke</title>
+
+<!--  <link rel="shortcut icon" type="image/x-icon" href="../static/images/schnecke_icon.ico">-->
+  <link rel="shortcut icon" type="image/x-icon" href="/images/schnecke_icon.ico">
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+
+  <link rel="stylesheet" href="/css/schnecke-cafe.css">
+
+  <link rel="stylesheet" href="/css/owl-carousel.css">
+
+  <link rel="stylesheet" href="/css/lightbox.css">
+
+</head>
+
+<body>
+
+<!-- ***** Preloader Start ***** -->
+<div id="preloader">
+  <div class="jumper">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- ***** Preloader End ***** -->
+
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo Start ***** -->
+          <a href="/" class="logo">
+            <img src="/images/schnecke_title_text.png">
+          </a>
+          <!-- ***** Logo End ***** -->
+          <!-- ***** Menu Start ***** -->
+          <ul class="nav">
+            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+            <li class="scroll-to-section"><a href="#menu">Today's</a></li>
+            <li class="scroll-to-section"><a href="#offers">Menu</a></li>
+            <li class="scroll-to-section"><a href="#about">Art</a></li>
+            <li class="scroll-to-section"><a href="#reservation">About</a></li>
+          </ul>
+          <a class='menu-trigger'>
+            <span>Menu</span>
+          </a>
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+<!-- ***** Main Banner Area Start ***** -->
+
+<div id="top">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="main-banner header-text">
+        <div class="Modern-Slider">
+          <!-- Item -->
+          <div class="item">
+            <div class="img-fill">
+              <img src="/images/schnecke_banner.jpg">
+              <div class="banner_inner">
+                <img src="/images/schnecke_banner.png" >
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="img-fill">
+              <img src="/images/schnecke_banner.jpg">
+              <div class="banner_inner">
+                <img src="/images/schnecke_banner.png" >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ***** Main Banner Area End ***** -->
+
+
+
+<!-- ***** Menu Area Starts ***** -->
+<section class="section" id="menu">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="section-heading">
+          <h6>Today's Menu</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-item-carousel">
+    <div class="col-lg-12">
+      <div class="owl-menu-item owl-carousel">
+        <div class="item">
+          <div class='card'
+               th:style="|background-image : url('@{/images/menu-item-01.jpg}');|">
+          </div>
+        </div>
+        <div class="item">
+          <div class='card'
+               th:style="|background-image : url('@{/images/menu-item-02.jpg}');|">
+          </div>
+        </div>
+        <div class="item">
+          <div class='card'
+               th:style="|background-image : url('@{/images/menu-item-03.jpg}');|">
+          </div>
+        </div>
+        <div class="item">
+          <div class='card'
+               th:style="|background-image : url('@{/images/menu-item-04.jpg}');|">
+          </div>
+        </div>
+        <div class="item">
+          <div class='card'
+               th:style="|background-image : url('@{/images/menu-item-05.jpg}');|">
+          </div>
+        </div>
+        <div class="item">
+          <div class='card'
+               th:style="|background-image : url('@{/images/menu-item-03.jpg}');|">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ***** Menu Area Ends ***** -->
+<!-- ***** Menu Area Starts ***** -->
+<section class="section" id="offers">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4 text-center">
+        <div class="section-heading">
+          <h6>Cafe Menu</h6>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row" id="tabs">
+          <div class="col-lg-12">
+            <div class="heading-tabs">
+              <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                  <ul>
+                    <li><a href='#tabs-1'><img src="/images/tab-icon-01.png" alt="">Dish</a></li>
+                    <li><a href='#tabs-2'><img src="/images/tab-icon-02.png" alt="">Drink</a></a></li>
+                    <li><a href='#tabs-3'><img src="/images/tab-icon-03.png" alt="">Coffee</a></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <section class='tabs-content'>
+              <article id='tabs-1'  class="fh5co-featured-menu">
+                <div class="fh5co-section">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>Bake Potato Pizza</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>Bake Potato Pizza</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>Bake Potato Pizza</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>캬라멜 마끼야또</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>아메리카노</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>그린티</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article id='tabs-2'  class="fh5co-featured-menu">
+                <div class="fh5co-section">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>Bake Potato Pizza</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>Bake Potato Pizza</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>Bake Potato Pizza</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>캬라멜 마끼야또</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>아메리카노</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>그린티</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article id='tabs-3' class="fh5co-featured-menu">
+                <div class="fh5co-section">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>Bake Potato Pizza</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>Bake Potato Pizza</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>Bake Potato Pizza</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>캬라멜 마끼야또</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>아메리카노</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 fh5co-item-wrap">
+                        <div class="fh5co-item px-2">
+                          <img src="/images/about-thumb-01.jpg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+                          <h3>그린티</h3>
+                          <span class="fh5co-price">￦ 4,000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ***** Menu Area Ends ***** -->
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-xs-12">
+        <div class="left-text-content">
+          <div class="section-heading">
+            <h6>Art Class</h6>
+            <h2>슈네케 미술 공방</h2>
+          </div>
+          <p>미술 공방 설명 문구 어쩌고 저쩌고<br>더 자세히 알고 싶으면 아래 번호로 전화 기릿</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-xs-12">
+        <div class="right-content">
+          <div class="thumb" >
+            <!--<a rel="nofollow" ><i class="fa fa-play"></i></a>-->
+            <img  src="/images/about-video-bg.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ***** Reservation Us Area Starts ***** -->
+<section class="section" id="reservation">
+  <div class="container">
+    <div class="col-lg-11 align-self-center">
+      <div class="left-text-content">
+        <div class="section-heading">
+          <h6>ABOUT</h6>
+          <h2>슈네케 정보를 확인해주세요.</h2>
+        </div>
+        <p>더 궁금한 사항이 있으시면 아래 연락처로 문의해 주세요.</p>
+        <div class="row" >
+          <div class="col-lg-4">
+            <div class="phone">
+              <i class="fa fa-phone"></i>
+              <h4>전화 번호</h4>
+              <span>0507)<br>1346-1121</span>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="open">
+              <i class="fa fa-clock-o"></i>
+              <h4>오픈 시간</h4>
+              <span>11:00 AM ~ <br>08:00 PM</span>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="address" >
+              <i class="fa fa-map-marker"></i>
+              <h4>오시는 길</h4>
+              <span>광주 광산구 마항길 46 1층<br>(하남동 1088 1층)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ***** Reservation Area Ends ***** -->
+
+<!-- ***** Footer Start ***** -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-xs-12">
+        <div class="right-text-content">
+          <ul class="social-icons">
+            <li><a href="/" target="_blank"><i class="fa fa-home"></i></a></li>
+            <li><a href="https://map.naver.com/p/entry/place/1934979713" target="_blank"><i class="fa fa-chrome"></i></a></li>
+            <li><a href="https://www.instagram.com/schnecke_cafe/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="logo">
+          <a><img src="/images/schnecke_logo.png" alt=""></a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-xs-12">
+        <div class="left-text-content">
+          <p>© Schnecke
+            <br> Cafe / Art </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="/js/popper.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="js/owl-carousel.js"></script>
+<script src="/js/accordions.js"></script>
+<script src="/js/scrollreveal.min.js"></script>
+<script src="/js/waypoints.min.js"></script>
+<script src="/js/jquery.counterup.min.js"></script>
+<script src="/js/imgfix.min.js"></script>
+<script src="/js/slick.js"></script>
+<script src="/js/lightbox.js"></script>
+<script src="/js/isotope.js"></script>
+
+<!-- Global Init -->
+<script src="/js/custom.js"></script>
+<script>
+
+    $(function() {
+        var selectedClass = "";
+        $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+            $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+                $("."+selectedClass).fadeIn();
+                $("#portfolio").fadeTo(50, 1);
+            }, 500);
+
+        });
+    });
+
+</script>
+</body>
+</html>

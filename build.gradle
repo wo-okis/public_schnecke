@@ -1,0 +1,65 @@
+//Query DSL 3버전 부터 추가
+buildscript {
+	ext {
+		queryDslVersion = "5.0.0"
+	}
+}
+
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.8'
+	id 'io.spring.dependency-management' version '1.1.4'
+//	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10" //Query DSL 3버전 부터 추가
+}
+
+group = 'com.schnecke'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+// 라이브러리 버전 교체
+ext["hibernate.version"] = "6.2.20.Final"
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'	//spring data jpa
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'	//thymeleaf
+	implementation 'org.springframework.boot:spring-boot-starter-web'		//Spring web
+	implementation 'org.springframework.boot:spring-boot-starter-validation'	//validation 사용
+	runtimeOnly 'com.mysql:mysql-connector-j'	// Mysql 사용
+	compileOnly 'org.projectlombok:lombok'	//lombok
+
+	//QueryDSL 추가 [Spring boot 3.x 버전 이상]
+	implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
+	annotationProcessor "com.querydsl:querydsl-apt:${dependencyManagement.importedProperties['querydsl.version']}:jakarta"
+	annotationProcessor "jakarta.annotation:jakarta.annotation-api"
+	annotationProcessor "jakarta.persistence:jakarta.persistence-api"
+
+	annotationProcessor 'org.projectlombok:lombok'
+	//테스트에서 lombok 사용
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+// Querydsl 설정부
+def querydslDir = 'src/main/generated'
+
+clean {
+	delete file(querydslDir)
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
